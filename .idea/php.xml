@@ -113,6 +113,11 @@
       <path value="$PROJECT_DIR$/blog-api/vendor/vlucas/phpdotenv" />
       <path value="$PROJECT_DIR$/blog-api/vendor/fruitcake/laravel-cors" />
       <path value="$PROJECT_DIR$/blog-api/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/blog-api/vendor/dasprid/enum" />
+      <path value="$PROJECT_DIR$/blog-api/vendor/paragonie/constant_time_encoding" />
+      <path value="$PROJECT_DIR$/blog-api/vendor/pragmarx/google2fa" />
+      <path value="$PROJECT_DIR$/blog-api/vendor/bacon/bacon-qr-code" />
+      <path value="$PROJECT_DIR$/blog-api/vendor/laravel/fortify" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

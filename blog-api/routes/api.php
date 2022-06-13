@@ -26,5 +26,5 @@ Route::get('/posts/{post:slug}', [PostController::class, 'show']);
 
 Route::get('/admin/posts', [AdminPostController::class, 'index']);
 Route::post('/admin/posts', [AdminPostController::class, 'store']);
-Route::get('/admin/posts/{post:slug}/edit', [AdminPostController::class, 'show']);
+Route::get('/admin/posts/{post:uuid}/edit', [AdminPostController::class, 'show']);
 Route::patch('/admin/posts/{post:uuid}', [AdminPostController::class, 'update']);

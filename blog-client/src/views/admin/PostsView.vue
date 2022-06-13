@@ -13,13 +13,13 @@
       <div
         class="flex items-baseline sm:justify-between flex-wrap sm:flex-nowrap space-x-0 sm:space-x-6 space-y-3 sm:space-y-0"
       >
-        <p class="text-xl font-bold tracking-tight text-gray-900">
+        <p class="text-2xl font-bold tracking-tight text-gray-900">
           {{ post.title }}
         </p>
         <div class="flex items-center space-x-6">
           <p class="text-base text-gray-500">
             <span
-              class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium"
+              class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-bold"
               :class="{
                 'bg-green-100 text-green-800': post.published,
                 'bg-gray-100 text-gray-800': !post.published,
@@ -29,10 +29,15 @@
             </span>
           </p>
           <div>
-            <router-link to="/" class="text-sm font-medium">Edit</router-link>
+            <router-link
+              :to="{ name: 'admin.posts.edit', params: { uuid: post.uuid } }"
+              class="text-sm font-bold"
+            >
+              Edit
+            </router-link>
           </div>
           <div>
-            <button class="text-sm font-medium">Delete</button>
+            <button class="text-sm font-bold">Delete</button>
           </div>
         </div>
       </div>
@@ -53,9 +58,9 @@ onMounted(fetchPosts);
 const newPost = async () => {
   let post = await createPost();
 
-  await router.replace({
+  await router.push({
     name: "admin.posts.edit",
-    params: { slug: post.slug },
+    params: { uuid: post.uuid },
   });
 };
 </script>
